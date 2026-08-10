@@ -40,8 +40,9 @@ WorkFlow in Sort:
 Config → Load → Distribute (via mock network) → Store → Monitor → Verify
 
 ## Compiler Details:
-We are using G++ compiler from MSYS2 (https://www.msys2.org/)
-Text Editor used : VS Code
+# We are using G++ compiler from MSYS2 (https://www.msys2.org/)
+# Text Editor used : VS Code
+# For json library : https://github.com/nlohmann/json
 
 ## To Compile use below:
 Required C++ 20 for json-develop library
