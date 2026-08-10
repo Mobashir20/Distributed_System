@@ -8,7 +8,7 @@ int main() {
     /**************Config File Loading********************/
     //Opening Config File to read the schema and cluster info
     ConfigManager config;
-    if (!config.loadConfig("../config.json")) {
+    if (!config.loadConfig("config.json")) {
         return 1;
     }
 
@@ -80,4 +80,4 @@ int main() {
 
 //Compilation from Distribution System command line : g++ src/main.cpp -I include -I ../json-develop/include src/ConfigManager.cpp src/DataLoader.cpp src/DistributionEngine.cpp src/Node.cpp src/Verification.cpp src/MockNetwork.cpp -o Distributed_System
 
-//To run the application in Command line:  ./Distributed_System
+//To run the application in Command line:  .\Distributed_System
