@@ -1,0 +1,18 @@
+{
+  "schema": {
+    "fields": [
+      {"name": "id", "type": "int32"},
+      {"name": "name", "type": "string"},
+      {"name": "salary", "type": "int32"}
+    ]
+  },
+  "cluster": {
+    "num_nodes": 4,
+    "data_paths": [
+      "../data/node1_data.txt",
+      "../data/node2_data.csv",
+      "../data/node3_data.txt",
+      "../data/node4_data.txt"
+    ]
+  }
+}
