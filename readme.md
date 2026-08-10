@@ -45,5 +45,6 @@ Text Editor used : VS Code
 
 ## To Compile use below:
 Required C++ 20 for json-develop library
-If You are Compiling from Distribution_System Folder: g++ src/main.cpp -I include -I ../json-develop/include src/ConfigManager.cpp src/DataLoader.cpp src/DistributionEngine.cpp src/Node.cpp src/Verification.cpp src/MockNetwork.cpp -o Distributed_System
-To run the application in Command line:  ./Distributed_System
+If You are Compiling from Distribution_System Folder: 
+# g++ src/main.cpp -I include -I ../json-develop/include src/ConfigManager.cpp src/DataLoader.cpp src/DistributionEngine.cpp src/Node.cpp src/Verification.cpp src/MockNetwork.cpp -o Distributed_System
+# To run the application in Command line:  .\Distributed_System
