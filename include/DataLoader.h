@@ -4,10 +4,10 @@
 #include <vector>
 #include <unordered_set>
 
-using namespace std;
 
 struct Record {
-    vector<string> fields; // store parsed values as strings
+    //std::vector<FieldValue> fields;
+    std::vector<std::string> fields; // store parsed values as strings
 };
 
 class DataLoader {
@@ -16,14 +16,15 @@ public:
 
     // Load all files specified in config.json
     void loadAllFiles();
+    Record parseLine(const std::string& line);
 
     // Access loaded records
-    const vector<Record>& getRecords() const;
+    const std::vector<Record>& getRecords() const;
 
 private:
     const ConfigManager& config;
-    vector<Record> records;
-    unordered_set<string> seenKeys; // for duplicate detection
+    std::vector<Record> records;
+    std::unordered_set<std::string> seenKeys; // for duplicate detection
 
-    Record parseLine(const string& line);
+    
 };

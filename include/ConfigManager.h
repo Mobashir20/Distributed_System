@@ -3,22 +3,20 @@
 #include <vector>
 #include <unordered_map>
 
-using namespace std;
-
 struct FieldSchema {
-    string name;
-    string type; // "string" or "int32"
+    std::string name;
+    std::string type; // "string" or "int32"
 };
 
 class ConfigManager {
 public:
-    bool loadConfig(const string& filePath);
-    const vector<FieldSchema>& getSchema() const;
+    bool loadConfig(const std::string& filePath);
+    const std::vector<FieldSchema>& getSchema() const;
     int getNumNodes() const;
-    const vector<string>& getDataPaths() const;
+    const std::vector<std::string>& getDataPaths() const;
 
 private:
-    vector<FieldSchema> schema;
+    std::vector<FieldSchema> schema;
     int numNodes = 0;
-    vector<string> dataPaths;
+    std::vector<std::string> dataPaths;
 };
