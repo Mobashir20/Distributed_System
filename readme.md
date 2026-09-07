@@ -22,7 +22,7 @@
     d. Tracks statistics (record count, put/get counts).
     e. Persists data to disk (storage/nodeX_store.txt).
 
-5. NodeServer (Mock Server - MockServer)
+5. MockNetwork (Mock Server - MockServer)
     a. Simulates independent node processes.
     b. Runs a server loop.
     c. Accepts incoming records via MockSocket.
@@ -40,12 +40,16 @@ WorkFlow in Sort:
 Config → Load → Distribute (via mock network) → Store → Monitor → Verify
 
 ## Compiler Details:
-# We are using G++ compiler from MSYS2 (https://www.msys2.org/)
-# Text Editor used : VS Code
-# For json library : https://github.com/nlohmann/json
+We are using G++ compiler from MSYS2 (https://www.msys2.org/)
+Build : CMake
+Text Editor used : VS Code
 
-## To Compile use below:
+## To Build/Compile use below:
 Required C++ 20 for json-develop library
 If You are Compiling from Distribution_System Folder: 
-# g++ src/main.cpp -I include -I ../json-develop/include src/ConfigManager.cpp src/DataLoader.cpp src/DistributionEngine.cpp src/Node.cpp src/Verification.cpp src/MockNetwork.cpp -o Distributed_System
-# To run the application in Command line:  .\Distributed_System
+        rmdir build
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+To run the application in Command line(From inside build Folder):  ./Distributed_System
